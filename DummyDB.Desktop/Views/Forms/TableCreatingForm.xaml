@@ -1,0 +1,55 @@
+﻿<Window x:Class="DummyDB.Desktop.Views.Forms.TableCreatingForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="TableCreatingWindow"
+        Height="450" 
+        Width="800"
+        ResizeMode="NoResize">
+    <Grid>
+        <StackPanel 
+            Orientation="Horizontal"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left">
+            <ComboBox
+                Name="DatabaseName"
+                Width="150"
+                Height="30"
+                Margin="0 0 10 0"/>
+            <TextBox
+                Name="TableName"
+                Height="30"
+                Width="100"/>
+        </StackPanel>
+        <Button
+            Content="Добавить столбец"
+            Command="{Binding AddColumnCommand}"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"/>
+        <StackPanel
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right">
+            <StackPanel
+                Orientation="Horizontal">
+                <TextBlock
+                    Text="name"
+                    Margin="0 0 5 0"/>
+                <TextBlock
+                    Text="type"
+                    Margin="0 0 5 0"/>
+                <TextBlock
+                    Text="IsPrimary"/>
+            </StackPanel>
+            <StackPanel
+                Name="Columns"
+                Width="150"/>
+        </StackPanel>
+        <Button
+            Content="Сохранить"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            Command="{Binding SaveTableCommand}"/>
+    </Grid>
+</Window>

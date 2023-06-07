@@ -1,0 +1,33 @@
+﻿<Window x:Class="DummyDB.Desktop.Views.DbRedactingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="DbRedactingWindow" 
+        Height="300" 
+        Width="300"
+        ResizeMode="NoResize">
+    <Grid>
+        <TextBox
+            Name="DatabaseName"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Width="150"
+            Height="30"/>
+        <Button
+            Command="{Binding RenameDbCommand}"
+            Content="Переименовать"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"/>
+        <StackPanel
+            Name="TablesNames"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"/>
+        <Button
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Content="Сохранить изменения"
+            Command="{Binding SaveCommand}"/>
+    </Grid>
+</Window>

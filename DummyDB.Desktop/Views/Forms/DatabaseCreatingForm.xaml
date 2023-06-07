@@ -1,0 +1,23 @@
+﻿<Window x:Class="DummyDB.Desktop.Views.Forms.DatabaseCreatingForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="DatabaseCreatingWindow"
+        Height="100" 
+        Width="300"
+        ResizeMode="NoResize"
+        Background="Azure">
+        <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+                <TextBox
+                        Name="DatabaseName"
+                        Width="150"/>
+                <Button
+                        Margin="0 20 0 0 "
+                        Content="Создать БД"
+                        Command="{Binding CreateDatabaseCommand}"/>
+        </StackPanel>
+</Window>

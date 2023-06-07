@@ -1,0 +1,25 @@
+{
+  "name": "T1",
+  "columns": [
+    {
+      "name": "№ Фактуры",
+      "type": "int",
+      "IsPrimary": true
+    },
+    {
+      "name": "№ Клиента",
+      "type": "float",
+      "IsPrimary": true
+    },
+    {
+      "name": "Имя",
+      "type": "string",
+      "IsPrimary": false
+    },
+    {
+      "name": "Сумма",
+      "type": "int",
+      "IsPrimary": true
+    }
+  ]
+}

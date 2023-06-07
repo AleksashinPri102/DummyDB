@@ -1,0 +1,18 @@
+﻿<Page x:Class="DummyDB.Desktop.Views.Pages.TablePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+      Title="TablePage"
+      Height="450"
+      Width="800" 
+      ShowsNavigationUI="False">
+    <Grid>
+        <DataGrid
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            Name = "Table"
+            AutoGenerateColumns="False"/>
+    </Grid>
+</Page>

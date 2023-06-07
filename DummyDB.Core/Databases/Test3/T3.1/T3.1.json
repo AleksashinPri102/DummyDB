@@ -1,0 +1,15 @@
+{
+  "name": "T3.1",
+  "columns": [
+    {
+      "name": "№ Склада",
+      "type": "int",
+      "IsPrimary": true
+    },
+    {
+      "name": "Код Фирмы",
+      "type": "int",
+      "IsPrimary": true
+    }
+  ]
+}

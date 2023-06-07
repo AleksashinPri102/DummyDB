@@ -1,0 +1,20 @@
+{
+  "name": "T4",
+  "columns": [
+	{
+      	"name": "Категория",
+      	"type": "string",
+      	"IsPrimary": true
+   	 },
+   	 {
+      	"name": "Марка",
+      	"type": "string",
+      	"IsPrimary": false
+   	 },
+    	{
+      	"name": "Модель",
+      	"type": "string",
+      	"IsPrimary": false
+    	}
+  ]
+}

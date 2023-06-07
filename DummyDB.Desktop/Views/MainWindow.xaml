@@ -1,0 +1,111 @@
+﻿<Window x:Class="DummyDB.Desktop.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="450" 
+        Width="800"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Menu
+            Grid.Column="0"
+            Height="20"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Stretch"
+            Background="DarkGray">
+            <MenuItem
+                Header="Просмотр">
+                <MenuItem
+                    Header="Метаданные выбранной таблицы"
+                    Command="{Binding ShowMetaDataCommand}"/>
+                <MenuItem 
+                    Header="Метаданные всех БД"
+                    Command="{Binding ShowDbsMetaDataCommand}"/>
+            </MenuItem>
+            <MenuItem
+                Header="Создать">
+                <MenuItem
+                    Header="Базу данных"
+                    Command="{Binding CreateDatabaseCommand}"/>
+                <MenuItem
+                    Header="Таблицу"
+                    Command="{Binding CreateTableCommand}"/>
+            </MenuItem>
+            <MenuItem
+                Header="Редактировать">
+                <MenuItem
+                    Header="Выбранную БД"
+                    Command="{Binding DbRedactingCommand}"/>
+                <MenuItem
+                    Header="Выбранную таблицу"
+                    Command="{Binding OpenChangingMenuCommand}"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel 
+            Grid.Column="0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="0 0 0 50">
+            <StackPanel 
+                Orientation="Horizontal"
+                Width="365">
+                <TextBlock 
+                    Text="Выберите БД"
+                    Margin="0 0 10 0"/>
+                <ComboBox
+                    Name="DatabaseChoosingBox"
+                    Width="200"
+                    Margin="0 0 0 5"
+                    ItemsSource="{Binding DatabasesNames}"
+                    SelectedItem="{Binding SelectedDatabase}"/>
+            </StackPanel>
+            <StackPanel
+                Orientation="Horizontal"
+                Width="390">
+                <TextBlock
+                    Text="Выберите таблицу"
+                    FontSize="10"
+                    Margin="0 0 10 0"/>
+                <ComboBox
+                    Name="TableChoosingBox"
+                        Width="200"
+                ItemsSource="{Binding TablesNames}"/>
+            </StackPanel>
+        </StackPanel>
+        <Button 
+            Grid.Column="0"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="0 30 0 0"
+            Width="200"
+            Content="Открыть"
+            Command="{Binding ShowTablePageCommand}"/>
+        <GridSplitter
+            Grid.Column="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            Background="Black"/>
+        <Frame
+            Name="MainFrame"
+            Grid.Column="2"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            NavigationUIVisibility="Hidden"/>
+        <Button 
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Height="30"
+            Width="30"
+            Command="{Binding RefreshCommand}"
+            Content="{StaticResource Image}">
+        </Button>
+    </Grid>
+</Window>

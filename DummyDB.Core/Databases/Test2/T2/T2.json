@@ -1,0 +1,25 @@
+{
+  "name": "T2",
+  "columns": [
+    {
+      "name": "№",
+      "type": "int",
+      "IsPrimary": true
+    },
+    {
+      "name": "Фамилия",
+      "type": "string",
+      "IsPrimary": false
+    },
+    {
+      "name": "Имя",
+      "type": "string",
+      "IsPrimary": false
+    },
+    {
+      "name": "Оклад",
+      "type": "int",
+      "IsPrimary": false
+    }
+  ]
+}
