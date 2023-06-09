@@ -7,7 +7,7 @@
         Title="TableRedactingWindow" 
         Height="450" 
         Width="800"
-        ResizeMode="NoResize">
+        ResizeMode="CanResize">
         <StackPanel
                 Orientation="Horizontal">
                 <Border
