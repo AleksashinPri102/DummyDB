@@ -7,7 +7,7 @@
         Title="TableCreatingWindow"
         Height="450" 
         Width="800"
-        ResizeMode="NoResize">
+        ResizeMode="CanResize">
     <Grid>
         <StackPanel 
             Orientation="Horizontal"
